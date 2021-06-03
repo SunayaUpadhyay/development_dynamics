@@ -1,0 +1,174 @@
+:root {
+  --main-color: #070b76;
+  --main-bg-color: #ffffff;
+  --main-font: Arial, sans-serif;
+}
+
+html {
+  background-color: var(--main-bg-color);
+  font-family: var(--main-font);
+}
+
+.full-viewport {
+  width: 100%;
+  height: 100vh;
+}
+#first-section {
+  margin-bottom: 40px;
+}
+#first-section h1{
+  font-size: 2.5em;
+  color: var(--main-color);
+  font-weight: bold;
+  padding-right: 25%;
+  margin-top: 120px;
+  margin-bottom: 65px;
+}
+
+#first-section a{
+  color: var(--main-color);
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--main-color);
+  margin-bottom: 40px;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+#second-section {
+  background-color: var(--main-color);
+  padding: 70px;
+}
+
+#second-section h2{
+  color: var(--main-bg-color);
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-right: 30%;
+  word-break: break-word;
+  margin-bottom: 40px;
+}
+
+#second-section p {
+  color: var(--main-bg-color);
+  padding-left: 35%;
+  margin-bottom: 35px;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: flex-end; 
+  margin-left: 20px;
+}
+
+#nav-links a {
+  margin: 0 30px;
+  padding: 10px;
+  display: block;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+img#logo {
+  width: 320px;
+  height: auto;
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 0.75em;
+}
+
+#sec-btn-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-alt {
+  background-color: var(--main-color);
+  color: var(--main-bg-color)
+}
+
+#sec-btn-pub {
+  margin-right: 5px;
+  border: 1px solid white;
+}
+
+#sec-btn-book {
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  margin-left: 5px;
+}
+
+.dot {
+  height: 0.18em;
+  width: 0.18em;
+  margin: 0 2px;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#portfolio h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--main-color);
+  text-align: center;
+}
+
+#portfolio {
+  margin-top: 80px;
+}
+
+.heading-p-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.heading-p-div h3 {
+  font-size: 1.6em;
+  color: var(--main-color);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.heading-p-div p {
+  font-size: 0.7em;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+
+.hpd-img-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.hpd-img-div img{
+  display: block;
+  width: 500px;
+  height: 300px;
+  padding-left: 80px;
+}
+
+.port-container {
+  padding: 40px 0;
+  margin: 20px 0;
+}
+/* Need to fix this */
+.alter-img-hpd {
+  flex-direction: row-reverse;
+}
