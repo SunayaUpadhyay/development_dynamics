@@ -1,3 +1,4 @@
+/* Root */
 :root {
   --main-color: #070b76;
   --main-bg-color: #ffffff;
@@ -9,33 +10,32 @@ html {
   font-family: var(--main-font);
 }
 
-.full-viewport {
-  width: 100%;
-  height: 100vh;
-}
-#first-section {
-  margin-bottom: 40px;
-}
-#first-section h1{
-  font-size: 2.5em;
-  color: var(--main-color);
-  font-weight: bold;
-  padding-right: 25%;
-  margin-top: 120px;
-  margin-bottom: 65px;
-}
-
-#first-section a{
-  color: var(--main-color);
-  padding-bottom: 3px;
-  border-bottom: 1px solid var(--main-color);
-  margin-bottom: 40px;
-}
+/* Repeating classes */
 .container {
   width: 70%;
   margin: 0 auto;
+  max-width: 1000px;
 }
 
+.btn {
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 0.75em;
+  color: var(--main-color);
+}
+
+.btn-alt {
+  background-color: var(--main-color);
+  color: var(--main-bg-color)
+}
+
+.btn-bigger {
+  padding: 15px 40px;
+  font-size: 0.8em;
+}
+/*--------------------------*/
+
+/* Nav-bar */
 #navbar {
   display: flex;
   flex-direction: row;
@@ -45,24 +45,9 @@ html {
   flex-wrap: wrap;
 }
 
-#second-section {
-  background-color: var(--main-color);
-  padding: 70px;
-}
-
-#second-section h2{
-  color: var(--main-bg-color);
-  font-size: 2.5em;
-  font-weight: bold;
-  padding-right: 30%;
-  word-break: break-word;
-  margin-bottom: 40px;
-}
-
-#second-section p {
-  color: var(--main-bg-color);
-  padding-left: 35%;
-  margin-bottom: 35px;
+img#logo {
+  width: 320px;
+  height: auto;
 }
 
 #nav-links {
@@ -78,37 +63,74 @@ html {
   color: var(--main-color);
   font-weight: 600;
 }
+/*--------------------------*/
 
-img#logo {
-  width: 320px;
-  height: auto;
+/* First section of webpage */
+#first-section {
+  margin-bottom: 40px;
 }
 
-.btn {
-  border-radius: 50px;
-  padding: 10px 25px;
-  font-size: 0.75em;
+/* Home screen displayed occupying the full viewport*/
+.full-viewport {
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  max-height: 1000px;
 }
 
+#first-section h1{
+  font-size: 2.5em;
+  color: var(--main-color);
+  font-weight: bold;
+  padding-right: 25%;
+  margin-top: 120px;
+  margin-bottom: 65px;
+}
+
+#first-section a{
+  color: var(--main-color);
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--main-color);
+  margin-bottom: 40px;
+}
+/*-------------------------------------------*/
+
+/*Second section*/
+#second-section {
+  background-color: var(--main-color);
+  padding: 70px;
+}
+
+#second-section h2{
+  color: var(--main-bg-color);
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-right: 30%;
+  margin-bottom: 40px;
+}
+
+#second-section p {
+  color: var(--main-bg-color);
+  padding-left: 35%;
+  margin-bottom: 35px;
+}
+/* Two button flexbox */
 #sec-btn-div {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
-
-.btn-alt {
-  background-color: var(--main-color);
-  color: var(--main-bg-color)
-}
-
+/* Button for published */
 #sec-btn-pub {
-  margin-right: 5px;
+  margin: 5px 5px;
   border: 1px solid white;
 }
-
+/* Button for booking */
 #sec-btn-book {
   background-color: var(--main-bg-color);
   color: var(--main-color);
-  margin-left: 5px;
+  margin: 5px 5px;
+  margin-right: 0;
 }
 
 .dot {
@@ -119,56 +141,208 @@ img#logo {
   border-radius: 50%;
   display: inline-block;
 }
+/*---------------------------------------*/
 
-#portfolio h2 {
-  font-size: 2em;
+/* Third section: Portfolio */
+
+#port-section {
+  padding-top: 80px;
+}
+
+/* Heading */
+#portfolio-h2 {
+  font-size: 2.3em;
   font-weight: 700;
   color: var(--main-color);
   text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+/* Each seperate portfolio class */
+.port-container {
+  padding: 40px 0;
+  margin: 20px 0;
+}
+/* (Heading para, button) & image div */
+.hpd-img-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#portfolio {
-  margin-top: 80px;
+.hpd-img-div .btn{
+  margin: 15px 0;
 }
 
+.hpd-img-div img{
+  width: 400px;
+  height: 400px;
+}
+
+/* (Heading, para) & button div */ 
+/* Heading and para are in seperate div */
 .heading-p-div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  width: 500px;
 }
 
 .heading-p-div h3 {
-  font-size: 1.6em;
+  font-size: 1.8em;
   color: var(--main-color);
   font-weight: 600;
   margin-bottom: 10px;
 }
 
+.heading-p-div div {
+  margin: 15px 0;
+}
+
 .heading-p-div p {
-  font-size: 0.7em;
+  font-size: 0.9em;
   color: var(--main-color);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-
-.hpd-img-div {
-  display: flex;
-  flex-direction: row;
-}
-
-.hpd-img-div img{
-  display: block;
-  width: 500px;
-  height: 300px;
-  padding-left: 80px;
-}
-
-.port-container {
-  padding: 40px 0;
-  margin: 20px 0;
-}
-/* Need to fix this */
+/* Alternate image & texts-button */
 .alter-img-hpd {
   flex-direction: row-reverse;
 }
+
+/*-----------------------------*/
+
+/* Fourth section: About us */
+
+#fourth-section {
+  padding: 20px 0;
+  background-color: var(--main-color);
+  padding-bottom: 300px;
+}
+
+/* The whole container */
+#about-container {
+  margin-bottom: 180px;
+}
+
+/* Heading: About us */
+#about-us {
+  color: var(--main-bg-color);
+  font-size: 2em;
+  font-weight: 700;
+  padding: 20px;
+  margin: 20px 20px 60px 20px;
+  text-align: center;
+}
+
+/* Div for (containing) two people */
+#two-plp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+/* Seperate section for each */
+.person-container {
+  display: inline-block;
+}
+
+/* Div containing image & preceding text */
+.img-txt-about {
+  display: inline-block;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+/* Div for image */
+.about-image {
+  margin-bottom: 20px;
+}
+
+/* Text datas */
+/* Div for text */
+.about-text p {
+  color: var(--main-bg-color);
+}
+
+.cmp-title {
+  font-size: 1em;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.name {
+  font-size: 1.7em;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+.job {
+  font-size: 1.4em;
+  padding-bottom: 10px;
+}
+
+/* Second person in about us */
+#sec-person {
+  margin-top: 100px;
+}
+/*-------------------*/
+
+/* Contact us section */
+
+#contact h2 {
+  color: var(--main-bg-color);
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  margin: 60px;
+}
+
+/* Btn resizing */
+.btn-biggest {
+  padding: 25px 60px;
+  font-size: 1em;
+}
+
+
+/* Button & text */
+.btn-p-container {
+  width: 350px;
+  margin: 0 auto;
+}
+
+/* Text below btn */
+#btn-endnote {
+  width: 85%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#contact p {
+  color: var(--main-bg-color);
+  font-size: 1em;
+  padding: 20px 0;
+}
+/*--------------------*/
+
+/* All rights reversed line */
+#copyright {
+  text-align: center;
+  background-color: var(--main-color);
+  padding: 60px;
+  color: var(--main-bg-color)
+}
+
+/* Interactive (hover, click) elements */
+
+/*----------------------*/
+
+
+/* Layout for smaller screen */
+
+/*-----------------------*/
