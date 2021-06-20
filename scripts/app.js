@@ -1,6 +1,8 @@
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
-const navLinks = document.querySelectorAll('.nav-links a')
+const navLinks = document.querySelectorAll('.nav-links a');
+const body = document.querySelector('body');
+const overlay = document.getElementById('overlay');
 
 function burgerClick() {
   //Toggle Nav
@@ -17,14 +19,24 @@ function burgerClick() {
   
   //Burger Animation
   burger.classList.toggle('toggle');
+
+  //Disable scroll
+  body.classList.toggle('no-scroll');
+
+  //Enable overlay
+  overlay.classList.toggle('overlay');
 }
 
 const navSlide = () => {
   burger.addEventListener('click', burgerClick);
 
   navLinks.forEach((link) => {
-    link.addEventListener('click', burgerClick)
-  });
+    link.addEventListener('click', () => {
+      if (getComputedStyle(burger).display != "none") {
+        burgerClick();
+      }
+    });
+  })
 }
 
 navSlide();
